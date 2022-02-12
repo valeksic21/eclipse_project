@@ -1,0 +1,85 @@
+{
+  "openapi" : "3.0.0",
+  "info" : {
+    "title" : "PartyData",
+    "description" : "Test api",
+    "termsOfService" : "https://smartbear.com/terms-of-use",
+    "contact" : {
+      "name" : "Vjekoslav Aleksić",
+      "email" : "vjekoslav.aleksic@gmail.com"
+    },
+    "version" : "1.0"
+  },
+  "servers" : [ {
+    "url" : "https://virtserver.swaggerhub.com/Alex279/Party/1.0",
+    "description" : "SwaggerHub API Auto Mocking"
+  }, {
+    "url" : "https://prod.virtserver.swaggerhub.com/Alex279/Party/1.0",
+    "description" : "SwaggerHub API Auto Mocking Prod"
+  } ],
+  "paths" : {
+    "/party" : {
+      "get" : {
+        "description" : "Entity that contain party repository",
+        "parameters" : [ {
+          "name" : "firstName",
+          "in" : "query",
+          "description" : "First name of party",
+          "required" : false,
+          "style" : "form",
+          "explode" : true,
+          "schema" : {
+            "type" : "string",
+            "example" : "John"
+          }
+        }, {
+          "name" : "lastName",
+          "in" : "query",
+          "description" : "Last name of party",
+          "required" : false,
+          "style" : "form",
+          "explode" : true,
+          "schema" : {
+            "type" : "string",
+            "example" : "Smith"
+          }
+        }, {
+          "name" : "OIB",
+          "in" : "query",
+          "description" : "OIB of party",
+          "required" : false,
+          "style" : "form",
+          "explode" : true,
+          "schema" : {
+            "maximum" : 99999999999,
+            "minimum" : 0,
+            "type" : "string",
+            "example" : "12345678901"
+          }
+        }, {
+          "name" : "responseCount",
+          "in" : "query",
+          "description" : "number of results to return",
+          "required" : false,
+          "style" : "form",
+          "explode" : true,
+          "schema" : {
+            "maximum" : 999,
+            "minimum" : 1,
+            "type" : "integer",
+            "example" : 2
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "succesfull response with party info",
+            "content" : {
+              "schema" : { }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components" : { }
+}
