@@ -1,0 +1,28 @@
+{
+  "openapi" : "3.0.0",
+  "info" : {
+    "title" : "Party data",
+    "description" : "Test api",
+    "termsOfService" : "https://smartbear.com/terms-of-use",
+    "contact" : {
+      "name" : "Vjekoslav Aleksić",
+      "email" : "vjekoslav.aleksic@gmail.com"
+    },
+    "version" : "1.0"
+  },
+  "servers" : [ {
+    "url" : "https://virtserver.swaggerhub.com/Alex279/Party/1.0",
+    "description" : "SwaggerHub API Auto Mocking"
+  }, {
+    "url" : "https://prod.virtserver.swaggerhub.com/Alex279/Party/1.0",
+    "description" : "SwaggerHub API Auto Mocking Prod"
+  } ],
+  "paths" : {
+    "/parties" : {
+      "get" : {
+        "description" : "Entity that contain party repository"
+      }
+    }
+  },
+  "components" : { }
+}
